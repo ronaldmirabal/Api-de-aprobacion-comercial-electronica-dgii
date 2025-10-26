@@ -3,8 +3,6 @@
 </p>
 
 # Api de Aprobacion Comercial Electronica de la Dgii
-<div align="center">
 ![Laravel](https://img.shields.io/badge/Laravel-12-red.svg?style=for-the-badge)
 ![PHP](https://img.shields.io/badge/PHP-8.2+-8A2BE2?style=for-the-badge)
-</div>
 

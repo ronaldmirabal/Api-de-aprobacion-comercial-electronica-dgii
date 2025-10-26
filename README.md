@@ -7,3 +7,8 @@
 ![PHP](https://img.shields.io/badge/PHP-8.2+-8A2BE2?style=for-the-badge)
 ![DGII](https://img.shields.io/badge/DGII-COMPATIBLE-brightgreen?style=for-the-badge)
 
+Sistema de aprobación comercial DGII desarrollado con Laravel 12. Este proyecto implementa las funcionalidades necesarias para la validación, aprobación y gestión de comprobantes electrónicos según las normativas de la Dirección General de Impuestos Internos (DGII) de la República Dominicana.
+
+# :mag_right: Características Principales
+## Documentos Electrónicos Soportados
+

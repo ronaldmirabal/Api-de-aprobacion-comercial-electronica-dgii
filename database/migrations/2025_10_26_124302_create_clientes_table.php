@@ -22,6 +22,11 @@ return new class extends Migration
             $table->boolean('activo')->default(true);
             $table->timestamps();
             $table->unique('numero_documento');
+            $table->bigInteger('empresa_id')->unsigned();
+
+            $table->foreign('empresa_id')
+            ->references('id')->on('empresas')
+            ->onDelete('cascade');
         });
     }
 

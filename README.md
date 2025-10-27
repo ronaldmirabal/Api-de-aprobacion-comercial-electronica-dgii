@@ -13,7 +13,7 @@ Sistema de aprobación comercial DGII desarrollado con Laravel 12. Este proyecto
 ## Documentos Electrónicos Soportados
 
 ## :clipboard: Requisitos
-- PHP ^8.3
+- PHP ^8.2
 - Laravel ^12.0
 
 ## Credits

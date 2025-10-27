@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3c16cb86c42230c6c023d9a5d9bcf42",
+    "content-hash": "1aa5d014ca0e1e5425a23eea6ce655aa",
     "packages": [
         {
             "name": "brick/math",
@@ -3341,6 +3341,57 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.1"
             },
             "time": "2025-09-04T20:59:21+00:00"
+        },
+        {
+            "name": "selective/xmldsig",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/selective-php/xmldsig.git",
+                "reference": "adfa81bc744a29f808a5216bf73e0cb2bcd7af91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/selective-php/xmldsig/zipball/adfa81bc744a29f808a5216bf73e0cb2bcd7af91",
+                "reference": "adfa81bc744a29f808a5216bf73e0cb2bcd7af91",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-openssl": "*",
+                "php": "~8.1 || ~8.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3",
+                "phpstan/phpstan": "^1",
+                "phpunit/phpunit": "^10",
+                "squizlabs/php_codesniffer": "^3",
+                "starkbank/ecdsa": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Selective\\XmlDSig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Sign XML Documents with Digital Signatures",
+            "homepage": "https://github.com/selective-php/xmldsig",
+            "keywords": [
+                "signatures",
+                "verify",
+                "xml",
+                "xmldsig"
+            ],
+            "support": {
+                "issues": "https://github.com/selective-php/xmldsig/issues",
+                "source": "https://github.com/selective-php/xmldsig/tree/3.1.0"
+            },
+            "abandoned": "robrichards/xmlseclibs",
+            "time": "2023-09-09T22:17:11+00:00"
         },
         {
             "name": "symfony/clock",

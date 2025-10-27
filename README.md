@@ -12,3 +12,16 @@ Sistema de aprobación comercial DGII desarrollado con Laravel 12. Este proyecto
 # :mag_right: Características Principales
 ## Documentos Electrónicos Soportados
 
+## :clipboard: Requisitos
+- PHP ^8.3
+- Laravel ^12.0
+
+## Credits
+
+- [Ronald Mirabal](https://github.com/ronaldmirabal)
+- [All Contributors](../../contributors)
+
+## 📄 License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+

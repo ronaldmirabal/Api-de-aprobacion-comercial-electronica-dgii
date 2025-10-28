@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\DgiiServices;
+use App\Services\ProveedorService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(DgiiServices::class);
+        $this->app->bind(ProveedorService::class);
     }
 
     /**

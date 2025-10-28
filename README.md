@@ -23,5 +23,5 @@ Sistema de aprobación comercial DGII desarrollado con Laravel 12. Este proyecto
 
 ## 📄 License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
 

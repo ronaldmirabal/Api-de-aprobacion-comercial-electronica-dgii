@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\DgiiServices;
+use App\Services\ProveedorService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -10,8 +11,10 @@ class AprobacionComercialController extends Controller
 {
 
     protected $_dgiiservices;
-    public function __construct(DgiiServices $dgiiservices) {
+    protected $_proveedorservice;
+    public function __construct(DgiiServices $dgiiservices, ProveedorService $proveedorService) {
         $this->_dgiiservices = $dgiiservices;
+        $this->_proveedorservice = $proveedorService;
     }
 
    public function recepcion(Request $request)  {
@@ -29,6 +32,8 @@ class AprobacionComercialController extends Controller
                 Log::info("e-CF recibido y almacenado en: {$path}");
 
                 $builArrayARECF = $this->_dgiiservices->buildArrayARECFToXML($xmlString);
+
+                $registrarProveedor = $this->_proveedorservice->registrarProveedor($builArrayARECF); //Se registra el proveedor si no esta registrado
                 $buildXml = $this->_dgiiservices->buildARECFXml($builArrayARECF);
                 $archivop12 = storage_path(env('URL_CERTIFICADOP12')); //Recordar agregar en el .env la ruta del archivo .p12 del certificado
                 $xmlFirmado = $this->_dgiiservices->firmarXML($archivop12, env('FIRMAP12_PASSWORD'), $buildXml);

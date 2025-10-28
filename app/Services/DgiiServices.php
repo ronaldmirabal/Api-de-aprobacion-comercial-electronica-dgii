@@ -16,6 +16,10 @@ class DgiiServices
         $xml = simplexml_load_string($xmlString);
         $data = [
             'RNCEmisor' => (string)$xml->Encabezado->Emisor->RNCEmisor,
+            'RazonSocialEmisor' => (string)$xml->Encabezado->Emisor->RazonSocialEmisor,
+            'NombreComercial' => (string)$xml->Encabezado->Emisor->NombreComercial ?? '',
+            'CorreoEmisor' => (string)$xml->Encabezado->Emisor->CorreoEmisor ?? '',
+            'RNCComprador' => (string)$xml->Encabezado->Emisor->RNCComprador ?? '',
             'eNCF' => (string)$xml->Encabezado->IdDoc->eNCF,
             'FechaEmision' => (string)$xml->Encabezado->Emisor->FechaEmision,
             'MontoTotal' => (string)$xml->Encabezado->Totales->MontoTotal,

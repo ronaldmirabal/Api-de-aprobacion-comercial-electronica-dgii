@@ -7,7 +7,7 @@
 ![PHP](https://img.shields.io/badge/PHP-8.2+-8A2BE2?style=for-the-badge)
 ![DGII](https://img.shields.io/badge/DGII-COMPATIBLE-brightgreen?style=for-the-badge)
 
-Sistema de aprobación comercial DGII desarrollado con Laravel 12. Este proyecto implementa las funcionalidades necesarias para la validación, aprobación y gestión de comprobantes electrónicos según las normativas de la Dirección General de Impuestos Internos (DGII) de la República Dominicana.
+Sistema de aprobación comercial DGII desarrollado con Laravel 12. Esta API fue desarrollada con el propósito de facilitar el proceso de aprobación comercial ante la DGII, especialmente para aquellos desarrolladores que ya cuentan con sistemas en entornos de escritorio y necesitan disponer de una URL pública para recibir los comprobantes electrónicos emitidos por otras empresas. Con esta solución, se busca agilizar la integración y puesta en marcha del proceso de recepción de comprobantes, ofreciendo una herramienta lista para conectarse con los servicios de la DGII sin necesidad de modificar los sistemas locales existentes.
 
 # ⚙️ Instalación del Proyecto Laravel
 ## :clipboard: Requisitos

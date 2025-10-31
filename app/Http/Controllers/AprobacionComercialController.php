@@ -34,6 +34,8 @@ class AprobacionComercialController extends Controller
                 $builArrayARECF = $this->_dgiiservices->buildArrayARECFToXML($xmlString);
 
                 $registrarProveedor = $this->_proveedorservice->registrarProveedor($builArrayARECF); //Se registra el proveedor si no esta registrado
+
+                
                 $buildXml = $this->_dgiiservices->buildARECFXml($builArrayARECF);
                 $archivop12 = storage_path(env('URL_CERTIFICADOP12')); //Recordar agregar en el .env la ruta del archivo .p12 del certificado
                 $xmlFirmado = $this->_dgiiservices->firmarXML($archivop12, env('FIRMAP12_PASSWORD'), $buildXml);

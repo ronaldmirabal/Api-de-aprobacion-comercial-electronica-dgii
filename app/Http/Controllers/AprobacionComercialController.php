@@ -33,7 +33,7 @@ class AprobacionComercialController extends Controller
 
                 $builArrayARECF = $this->_dgiiservices->buildArrayARECFToXML($xmlString);
 
-                $registrarProveedor = $this->_proveedorservice->registrarProveedor($builArrayARECF); //Se registra el proveedor si no esta registrado
+                //$registrarProveedor = $this->_proveedorservice->registrarProveedor($builArrayARECF); //Se registra el proveedor si no esta registrado
 
                 
                 $buildXml = $this->_dgiiservices->buildARECFXml($builArrayARECF);

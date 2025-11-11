@@ -56,7 +56,7 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
-#Errores al leer el certificado
+# Errores al leer el certificado
 Al intentar leer el archivo .p12 con openssl_pkcs12_read, obtenemos un error porque OpenSSL dejó de admitir el cifrado RC2-40-CBC en versiones recientes debido a problemas de seguridad. Sin embargo, este cifrado aún es utilizado por la DGII en los certificados emitidos por entidades certificadas, como la Cámara de Comercio.
 
 Para solucionarlo, debemos modificar el archivo openssl.cnf para que admita el cifrado que necesitamos, cambiando la configuración por defecto al modo "legacy".

@@ -56,6 +56,34 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
+#Errores al leer el certificado
+Al intentar leer el archivo .p12 con openssl_pkcs12_read, obtenemos un error porque OpenSSL dejó de admitir el cifrado RC2-40-CBC en versiones recientes debido a problemas de seguridad. Sin embargo, este cifrado aún es utilizado por la DGII en los certificados emitidos por entidades certificadas, como la Cámara de Comercio.
+
+Para solucionarlo, debemos modificar el archivo openssl.cnf para que admita el cifrado que necesitamos, cambiando la configuración por defecto al modo "legacy".
+##Habilitar cifrado "legacy"
+1. Edita el archivo openssl.cnf con el siguiente comando:
+```bash
+sudo nano /etc/ssl/openssl.cnf
+```
+2. Busca la sección [default_sect] y cámbiarla a:
+```bash
+[default_sect]
+ activate = 1
+```
+3. Luego, busca la sección [legacy_sect] y cámbiarla a:
+```bash
+ [legacy_sect]
+ activate = 1
+```
+4. Por último, busca la sección [provider_sect] y cámbiarla a:
+```bash
+ [provider_sect]
+ default = default_sect
+ legacy = legacy_sect
+```
+5. Finalmente, guardar los cambios, salir del archivo y reiniciar el entorno.
+
+
 # 🚀 Cómo Aportar
 
 1. **Haz un Fork del repositorio**
